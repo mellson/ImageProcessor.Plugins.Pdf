@@ -47,7 +47,7 @@ namespace ImageProcessor.Plugins.Pdf
 
         public Image Rasterize(Stream pdfStream, int pageNumber = 1)
         {
-            _rasterizer.Open(pdfStream, _lastInstalledVersion, false);
+            _rasterizer.Open(pdfStream, _lastInstalledVersion, true);
 
             var img = _rasterizer.GetPage(_desiredXDpi, _desiredYDpi, pageNumber);
 
